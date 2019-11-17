@@ -1,0 +1,8 @@
+const USER_ACTION = {
+    ADD: "ADD_IN_CART",
+    ADD_ALL: "ADD_ALL_IN_CART",
+    REMOVE: "REMOVE_FROM_CART",
+    REMOVE_ALL: "REMOVE_ALL_ITEMS",
+}
+
+export { USER_ACTION };
