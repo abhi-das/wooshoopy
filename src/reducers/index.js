@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import wishlistReducer from './wishlistReducer';
 import cartReducer from './cartReducer';
+import homeReducer from './homeReducer';
 
 const rootReducer = combineReducers({
     wishlist: wishlistReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    home: homeReducer
 })
 
 export default rootReducer;

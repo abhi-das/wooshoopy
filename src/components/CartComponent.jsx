@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CartComponent = () => {
+const CartComponent = ({ items }) => {
     return (
         <section id="cart-component" className="container">
             <div className="row pt-4">

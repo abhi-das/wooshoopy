@@ -6,10 +6,10 @@ const cartReducer = (state = [], action) => {
     switch (action.type) {
 
         case USER_ACTION.ADD:
-            return [...state, ...action.item];
+            return [...state, action.item];
 
         case USER_ACTION.ADD_ALL:
-            return [...state, ...action.items];
+            return [...state, action.items];
 
         case USER_ACTION.REMOVE:
 
