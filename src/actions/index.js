@@ -20,11 +20,15 @@ const addAllTo = (items) => ({
     items
 });
 
-const remove = (itemId) => ({
-    type: USER_ACTION.REMOVE,
+const removeFromCart = (itemId) => ({
+    type: USER_ACTION.REMOVE_FROM_CART,
     itemId
+});
+
+const removeAllFromCart = () => ({
+    type: USER_ACTION.REMOVE_ALL_FROM_CART
 });
 
 
 
-export { addToWish, addTo, addAllTo, remove, removeFromWish }
+export { addToWish, addTo, addAllTo, removeFromCart, removeFromWish, removeAllFromCart }

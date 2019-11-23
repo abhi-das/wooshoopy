@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
 
 import CartComponent from '../components/CartComponent';
-import { remove } from '../actions';
+import { removeFromCart, removeAllFromCart } from '../actions';
 
-const mapStateToProp = ({ items }) => ({
-    items
+const mapStateToProp = ({ cart }) => ({
+    items: cart
 })
 
 const mapDispatchToProp = dispatch => ({
-    remove: (id) => {
-        dispatch(remove(id))
+    removeFromCart: (id) => {
+        dispatch(removeFromCart(id))
+    },
+    removeAllFromCart: () => {
+        dispatch(removeAllFromCart())
     }
 })
 

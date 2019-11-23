@@ -5,12 +5,13 @@ import HomeComponent from '../components/HomeComponent';
 import { addToWish, addAllTo } from '../actions';
 
 const mapDispatchToProp = dispatch => ({
-    addTo: (item) => {
+    addToWish: (item) => {
         dispatch(addToWish(item))
     },
     addAllTo: (items) => {
         dispatch(addAllTo(items))
-    }
+    },
+
 })
 
 

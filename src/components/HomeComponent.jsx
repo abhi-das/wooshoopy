@@ -1,6 +1,6 @@
 import React from 'react';
 
-const HomeComponent = ({ addTo, addAllTo }) => {
+const HomeComponent = ({ addToWish, addAllTo }) => {
     const sampleItems = [
         {
             id: 1,
@@ -23,7 +23,11 @@ const HomeComponent = ({ addTo, addAllTo }) => {
         }];
     const testFn = (event) => {
         const { id } = event.target.dataset;
-        addTo(sampleItems[id]);
+        addToWish(sampleItems[id]);
+    }
+    const addInCart = (event) => {
+        const { id } = event.target.dataset;
+        addAllTo(sampleItems[id]);
     }
     return (
         <section id="home-component" className="container">
@@ -36,10 +40,8 @@ const HomeComponent = ({ addTo, addAllTo }) => {
                                 <div className="card-body">
                                     <h4 className="card-title">{itm.title}</h4>
                                     <p className="card-text">{itm.desc}</p>
-                                    <button className="btn btn-primary btn-sm">
-                                        +
-                            </button>
-                                    <span className="badge badge-success ml-2" data-id={i} onClick={testFn}>Link</span>
+                                    <button className="btn btn-sm btn-success ml-2" data-id={i} onClick={testFn}>Like</button>
+                                    <button className="btn btn-sm btn-info ml-2" data-id={i} onClick={addInCart}>AddToCart</button>
                                 </div>
                             </div>
                         </div>

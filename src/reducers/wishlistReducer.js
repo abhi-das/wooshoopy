@@ -8,9 +8,6 @@ const wishlistReducer = (state = [], action) => {
         case USER_ACTION.ADD_TO_WISH:
             return [...state, action.item];
 
-        case USER_ACTION.ADD_ALL:
-            return [...state, action.items];
-
         case USER_ACTION.REMOVE_FROM_WISH:
 
             const existingItem = state.filter((itm, i) => {
