@@ -1,4 +1,6 @@
 import React from 'react';
+import TitleComponent from './TitleComponent';
+import TitleDesc from './TitleDesc';
 
 const HomeComponent = ({ addToWish, addAllTo }) => {
     const sampleItems = [
@@ -29,12 +31,17 @@ const HomeComponent = ({ addToWish, addAllTo }) => {
         const { id } = event.target.dataset;
         addAllTo(sampleItems[id]);
     }
+    const newObj = {
+        titleText: "Component as a props",
+        descComp: <TitleDesc />
+    }
     return (
         <section id="home-component" className="container">
             <div className="row pt-4" >
                 {
                     sampleItems.map((itm, i) =>
                         <div className="col-3" key={itm.id}>
+                            <TitleComponent titleProps={newObj} />
                             <div className="card">
                                 <img className="card-img-top" src="./images/iwatch.jpg" alt="card_image" />
                                 <div className="card-body">

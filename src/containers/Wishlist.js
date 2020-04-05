@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
+import { getWishlistItems } from '../selectors';
 import WishlistComponent from '../components/WishlistComponent';
 
 import { removeFromWish } from '../actions';
 
-const mapStateToProp = ({ wishlist }) => ({
-    items: wishlist
+const mapStateToProp = (state) => ({
+    items: getWishlistItems(state)
 });
 
 const mapDispatchToProp = dispatch => ({
